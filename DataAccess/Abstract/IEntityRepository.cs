@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -7,7 +8,11 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface IEntityRepository<T>
+    // generic constraint
+    // class: referans tip
+    // IEntity : IEntity olabilir veya IEntity implemente eden bir nesne olabilir
+    // new() newlenebilir demek. Yani IEntity newlenemediği için bu özellikle IEntity de kullanımdan eleriz. Sadece IEntity implement eden nesneler kullanılabilir
+    public interface IEntityRepository<T> where T : class, IEntity, new()
     {
         List<T> GetAll(Expression<Func<T,bool>> filter =null); // null ifadesi filtre vermeyedebilirsin yani tüm datayı getirebilirsin
         T Get(Expression<Func<T, bool>> filter);

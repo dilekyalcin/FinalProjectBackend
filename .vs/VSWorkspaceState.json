@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ConsoleUI",
+    "\\DataAccess",
+    "\\DataAccess\\Abstract",
+    "\\DataAccess\\Concrete",
+    "\\DataAccess\\Concrete\\InMemory",
+    "\\Entities",
+    "\\Entities\\Concrete"
   ],
   "SelectedNode": "\\FinalProject.sln",
   "PreviewInSolutionExplorer": false

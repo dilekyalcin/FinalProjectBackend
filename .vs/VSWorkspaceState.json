@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Core",
+    "\\Core\\DataAccess",
+    "\\Core\\DataAccess\\EntityFramework"
   ],
   "SelectedNode": "\\FinalProject.sln",
   "PreviewInSolutionExplorer": false

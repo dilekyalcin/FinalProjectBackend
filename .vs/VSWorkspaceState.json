@@ -3,7 +3,8 @@
     "",
     "\\Core",
     "\\Core\\DataAccess",
-    "\\Core\\DataAccess\\EntityFramework"
+    "\\Core\\DataAccess\\EntityFramework",
+    "\\Entities"
   ],
   "SelectedNode": "\\FinalProject.sln",
   "PreviewInSolutionExplorer": false

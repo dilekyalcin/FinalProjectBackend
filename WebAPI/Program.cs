@@ -4,6 +4,9 @@ using Autofac.Extensions.DependencyInjection;
 using Business.Abstract;
 using Business.Concrete;
 using Business.DependencyResolvers.Autofac;
+using Core.DependencyResolvers;
+using Core.Extensions;
+using Core.Utilities.IoC;
 using Core.Utilities.Security.Encryption;
 using Core.Utilities.Security.JWT;
 using DataAccess.Abstract;
@@ -52,6 +55,9 @@ builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
     {
         builder.RegisterModule(new AutofacBusinessModule());
     });
+
+builder.Services.AddDependencyResolvers(new ICoreModule[] { new CoreModule() });
+
 
 var app = builder.Build();
 app.UseRouting();
